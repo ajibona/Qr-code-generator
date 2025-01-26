@@ -1,0 +1,148 @@
+
+*,
+::after,
+::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --cc-blue: #263FA9;
+  --cc-white: #FAFAF9;
+  --cc-white2: #F2F5F9;
+  --cc-white3: #F8FAFC1A;
+  --cc-dark: #030616;
+}
+
+
+body{
+  font-family: "Outfit", serif;
+  background: url("./resources/qa-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+}
+
+input, button{
+  font-family: "Outfit", serif;
+}
+
+.data-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.logo{
+  margin-bottom: 20px;
+}
+
+.input-box{
+  width: calc(100% - 20px);
+  border: 2px solid var(--cc-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 600px;
+  background-color: var(--cc-dark);
+}
+
+input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  color: #FAFAF9;
+}
+
+input::placeholder{
+  color: var(--cc-white);
+  font-weight: 500;
+}
+
+button{
+  padding-inline: 40px;
+  padding-block: 13px;
+  font-size: .9rem;
+  border: none;
+  background-color: var(--cc-blue);
+  color: var(--cc-white);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity .1s ease;
+}
+
+button:hover{
+  opacity: 80%;
+}
+
+.qr-display{
+  display: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+.small-logo{
+  margin-bottom: 8.75rem;
+  margin-top: 20px;
+}
+
+.qr-center{
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.circle{
+  height: 250px;
+  width: 250px;
+  background-color: var(--cc-white3);
+  border-radius: 50%;
+  position: relative;
+}
+
+.qr-image{
+  width: 200px;
+  max-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  transition: all .1s ease;
+}
+
+.imageanim{
+  max-height: 200px;
+  opacity: 100%;
+}
+
+.btn{
+  display: flex;
+  gap: 40px;
+}
+
+.btn button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.show-container{
+  display:  none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-qr{
+  display: flex;
+}
